@@ -6,7 +6,7 @@
 /*   By: rrakman <rrakman@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 22:25:20 by rrakman           #+#    #+#             */
-/*   Updated: 2024/03/23 22:10:50 by rrakman          ###   ########.fr       */
+/*   Updated: 2024/03/28 23:34:00 by rrakman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,28 @@ class Fixed {
 		int shift( void ) const;
 		float toFloat( void ) const;
 		int toInt( void ) const;
+		
+		bool operator>(const Fixed &instance) const;
+		bool operator<(const Fixed &instance) const;
+		bool operator>=(const Fixed &instance) const;
+		bool operator<=(const Fixed &instance) const;
+		bool operator==(const Fixed &instance) const;
+		bool operator!=(const Fixed &instance) const;
+		
+		Fixed operator+(const Fixed &instance) const;
+		Fixed operator-(const Fixed &instance) const;
+		Fixed operator*(const Fixed &instance) const;
+		Fixed operator/(const Fixed &instance) const;
+		
+		Fixed &operator++(void);
+		Fixed operator++(int);
+		Fixed &operator--(void);
+		Fixed operator--(int);
+		
+		static Fixed &min(Fixed &a, Fixed &b);
+		static Fixed &max(Fixed &a, Fixed &b);
+		static const Fixed &min(const Fixed &a, const Fixed &b);
+		static const Fixed &max(const Fixed &a, const Fixed &b);
 };
 
 std::ostream & operator<<(std::ostream & output, Fixed const & instance);

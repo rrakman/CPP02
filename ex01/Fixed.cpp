@@ -6,7 +6,7 @@
 /*   By: rrakman <rrakman@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 22:25:18 by rrakman           #+#    #+#             */
-/*   Updated: 2024/03/23 22:11:17 by rrakman          ###   ########.fr       */
+/*   Updated: 2024/03/29 01:26:29 by rrakman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ Fixed::Fixed( float const num)
 
 float Fixed::toFloat( void ) const
 {
-	return (float) fixed_number/shift();
+	return ((float)fixed_number/shift());
 }
 
 int Fixed::toInt( void ) const

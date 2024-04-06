@@ -6,7 +6,7 @@
 /*   By: rrakman <rrakman@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 22:25:20 by rrakman           #+#    #+#             */
-/*   Updated: 2024/03/22 22:33:45 by rrakman          ###   ########.fr       */
+/*   Updated: 2024/03/29 01:10:45 by rrakman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,6 @@ class Fixed {
 		Fixed	&operator=(const Fixed &instance);
 		~Fixed();
 		int getRawBits( void ) const;
-		void setRawBits( int const raw );		
+		void setRawBits( int const raw );
 };
 
